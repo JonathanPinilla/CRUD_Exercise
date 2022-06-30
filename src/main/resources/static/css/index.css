@@ -1,0 +1,150 @@
+/*Bring the Roboto family from google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*Set the default values of background, font color and font family*/
+:root {
+    background-color: #121212;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Edit the headlines to fit material design from google*/
+h1 {
+    font-weight: 200;
+    font-size: 96px;
+}
+
+h2 {
+    font-weight: 200;
+    font-size: 60px;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 48px;
+}
+
+h4 {
+    font-weight: normal;
+    font-size: 34px;
+}
+
+h5 {
+    font-weight: normal;
+    font-size: 24px;
+}
+
+h6 {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+subtitle1 {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+subtitle2 {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+body1 {
+    font-weight: normal;
+    font-size: 16px;
+    margin-top: 2.33em;
+    margin-bottom: 2.33em;
+}
+
+body2 {
+    font-weight: normal;
+    font-size: 14px;
+    margin-top: 2.33em;
+    margin-bottom: 2.33em;
+}
+
+button {
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+caption {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+overline {
+    font-weight: normal;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+/*-------------------------------------------------*/
+
+/*Styles*/
+button {
+    background-color: #03DAC5;
+    border-radius: 4pt;
+    border-style: none;
+    color: #000000;
+    height: 36pt;
+    min-width: 46pt;
+    padding-left: 16pt;
+    padding-right: 16pt;
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+}
+
+button:hover {
+    box-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: 0pt 4pt 4pt rgba(0, 0, 0, 0.25) inset;
+    cursor: pointer;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label{
+    margin-top: 4pt;
+}
+
+input{
+    display: table-cell;
+    border-radius: 4pt 4pt 0pt 0pt;
+    background-color: rgba(255, 255, 255, 0.12);
+    border-top: 0pt;
+    border-right: 0pt;
+    border-left: 0pt;
+    border-bottom: 1pt;
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+    height: 48pt;
+    width: 280pt;
+    padding-left: 16pt;
+    padding-right: 12pt;
+    margin-top: 4pt;
+    font-size: 16px;
+    color: #FFF;
+}
+
+input:hover{
+    
+    cursor: pointer;
+}
+
+input:active{
+    border-bottom: 2pt;
+    border-bottom-color: #00C4B4;
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
