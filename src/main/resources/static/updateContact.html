@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create Contact</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/updateContact.js"></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <div>
+        <h6>Create a new contact</h6>
+        <body1>You have to fill the next form and then click the submit button to update a contact name</body1>
+        <br>
+        <body1>You can update the contact name only, you must fill all the form</body1>
+        <br><br>
+        <form id="formToUpdate">
+            <label for="id">Contact Id</label>
+            <input id="id" name="id" type="text" required>
+            <label for="contactName">Name</label>
+            <input name="contactName" type="text" required>
+            <label for="contactLname">Last name</label>
+            <input name="contactLname" type="text" required>
+            <label for="email">Email</label>
+            <input name="email" type="email" required>
+            <label for="contactBirth">Birth Date</label>
+            <input name="contactBirth" type="date" required>
+            <button id="updateContact" type="submit">Submit</button>
+        </form>
+        <br>
+        <button onclick="history.back()">Go back</button>
+    </div>
+</body>
+
+</html>

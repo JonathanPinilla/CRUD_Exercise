@@ -1,3 +1,11 @@
+/**
+ * Control buttons and Get method to show all the contacts on the norebook
+ *
+ * @version 1.0.0 2022-06-29
+ * @author Jonathan Daniel Pinilla Forero <jonathan_pinilla@outlook.com>
+ * @since 1.0.0
+ */
+
 document.addEventListener("DOMContentLoaded", function () {
     /**
      * @param getListButton get the button that gets the contact list
@@ -9,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const deleteContactRedirButton = document.querySelector('#deleteContactRedirButton');
     const createPhoneRedirButton = document.querySelector('#createPhoneRedirButton');
     const updateContactNRedirButton = document.querySelector('#updateContactNRedirButton');
+    const lDeletePhoneRedirButton = document.querySelector('#lDeletePhoneRedirButton');
 
     /**
      * Fetch request method Get creates table fields and fills them with Contact info
@@ -30,7 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     const tdLname = document.createElement('td');
                     const tdEmail = document.createElement('td');
                     const tdPhone = document.createElement('td');
+                    const tdPhoneid = document.createElement('td');
                     let phoneList = [];
+                    let phoneIdsList = [];
 
                     tdId.textContent = element.id;
                     tdBirthDate.textContent = element.contactBirth;
@@ -39,8 +50,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     tdEmail.textContent = element.email;
                     element.phones.forEach(element => {
                         phoneList.push(element.phoneNumber);
+                        phoneIdsList.push(element.id);
                     });
                     tdPhone.textContent = phoneList;
+                    tdPhoneid.textContent = phoneIdsList;
+
                     
                     tr.appendChild(tdId);
                     tr.appendChild(tdName);
@@ -48,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     tr.appendChild(tdEmail);
                     tr.appendChild(tdBirthDate);
                     tr.appendChild(tdPhone);
+                    tr.appendChild(tdPhoneid);
 
                     tbody.appendChild(tr);
 
@@ -82,8 +97,15 @@ document.addEventListener("DOMContentLoaded", function () {
     /**
      * Function to load updateContact.html
      */
-     const updateContactNRedir = function () {
+    const updateContactNRedir = function () {
         window.location.href = 'http://localhost:8080/updateContact.html'
+    };
+
+    /**
+     * Function to load lDeletePhone.html
+     */
+     const lDeletePhoneRedir = function () {
+        window.location.href = 'http://localhost:8080/lDeletePhone.html'
     };
 
     /**
@@ -93,5 +115,6 @@ document.addEventListener("DOMContentLoaded", function () {
     deleteContactRedirButton.addEventListener("click", deleteContactRedir);
     createPhoneRedirButton.addEventListener("click", createPhoneRedir);
     updateContactNRedirButton.addEventListener("click", updateContactNRedir);
+    lDeletePhoneRedirButton.addEventListener("click", lDeletePhoneRedir);
     getListButton.addEventListener("click", getContactList);
 });

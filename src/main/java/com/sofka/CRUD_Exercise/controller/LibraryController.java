@@ -97,7 +97,7 @@ public class LibraryController {
     }
 
     /**
-     * Updates the name of an existing contact by it's id
+     * Updates the name of an existing contact by its id
      * @param contact object to be updated
      * @param id parameter to find the contact to update
      * @return response and http status
@@ -120,12 +120,35 @@ public class LibraryController {
     }
 
     /**
+     * Updates the name of an existing phone by its id logical delete phone number = 0
+     * @param phone object to be updated
+     * @param id parameter to find the contact to update
+     * @return response and http status
+     */
+    @PutMapping(path = "/api/v1/phone/{id}")
+    public ResponseEntity<Response> updatePhoneLD(
+            @RequestBody Phone phone,
+            @PathVariable(value="id") Integer id
+    ) {
+        response.restart();
+        try {
+            response.data = contactLibraryService.updatePhone(id, phone);
+            httpStatus = HttpStatus.OK;
+        } catch (DataAccessException exception) {
+            getErrorMessageForResponse(exception);
+        } catch (Exception exception) {
+            getErrorMessageInternal(exception);
+        }
+        return new ResponseEntity(response, httpStatus);
+    }
+
+    /**
      * Deletes a contact using its id
      * @param id of the contact to delete
      * @return the response and its http status
      */
     @DeleteMapping(path = "/api/v1/contact/{id}")
-    public ResponseEntity<Response> deleteContacto(@PathVariable(value="id") Integer id) {
+    public ResponseEntity<Response> deleteContact(@PathVariable(value="id") Integer id) {
         response.restart();
         try {
             response.data = contactLibraryService.deleteContact(id);

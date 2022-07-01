@@ -1,3 +1,11 @@
+/**
+ * Deletes a contact
+ *
+ * @version 1.0.0 2022-06-29
+ * @author Jonathan Daniel Pinilla Forero <jonathan_pinilla@outlook.com>
+ * @since 1.0.0
+ */
+
 document.addEventListener("DOMContentLoaded", function () {
     /**
      * @param formElement loads the form information bi its id

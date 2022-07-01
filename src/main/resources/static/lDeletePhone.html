@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create Contact</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/lDeletePhone.js"></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <div>
+        <h6>Create a new contact</h6>
+        <body1>Yo have to fill (phoneNumber = 0 to logical delete) the next form and then click the submit button to logical a new phone</body1>
+        <br><br>
+        <form id="formToLDelete">
+            <body1>To see the id of the current contacts on the system, press the button go back and then show contacts</body1>
+            <label for="id">Phone id</label>
+            <input id="id" name="id" type="text" required>
+            <label for="phoneContact">Contact id</label>
+            <input name="phoneContact" type="text" required>
+            <label for="phoneNumber">Phone number</label>
+            <input name="phoneNumber" max="0" min="0" type="number" required>
+            <button id="createPhone" type="submit">Submit</button>
+        </form>
+        <br>
+        <button onclick="history.back()">Go back</button>
+    </div>
+</body>
+
+</html>

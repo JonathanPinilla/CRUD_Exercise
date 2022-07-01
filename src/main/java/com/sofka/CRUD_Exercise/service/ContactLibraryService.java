@@ -83,7 +83,7 @@ public class ContactLibraryService implements ILibrary {
     }
 
     /**
-     * Update the name of a contact with the given id.
+     * Update the name of a contact with the given id (Not implemented)
      *
      * @param id      the id of the contact to update
      * @param contact the contact object that will be updated
@@ -97,7 +97,7 @@ public class ContactLibraryService implements ILibrary {
     }
 
     /**
-     * Update the last name of a contact given the id.
+     * Update the last name of a contact given the id (Not implemented)
      *
      * @param id      the id of the contact to update
      * @param contact the contact object that will be updated
@@ -123,6 +123,12 @@ public class ContactLibraryService implements ILibrary {
         return phoneRepository.save(phone);
     }
 
+    /**
+     * Updates only the phone number (Not implemented)
+     * @param id    the id of the phone to update
+     * @param phone the phone object to update
+     * @return
+     */
     @Override
     public Phone updateOnlyNumber(Integer id, Phone phone) {
         phone.setId(id);
@@ -148,7 +154,7 @@ public class ContactLibraryService implements ILibrary {
     }
 
     /**
-     * Delete a phone.
+     * Delete a phone (Not implemented)
      *
      * @param id the id of the phone to delete
      * @return the phone deleted
