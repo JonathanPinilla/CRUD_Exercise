@@ -20,11 +20,11 @@ document.addEventListener("DOMContentLoaded", function () {
          * @param data is the data collected in the form in the html
          */
         const data = new FormData(this);
-        fetch('http://localhost:8080/api/v1/contact', {
+        fetch('http://localhost:8080/api/v1/phone', {
             method: 'POST',
             body: data
         }).then(function (response) {
-            if(response.status == 201){alert("Contact created successfully");}
+            if(response.status == 201){alert("Phone created successfully");}
             else{alert("An error ocurred: ",response)};
             window.location.href = 'http://localhost:8080/index.html';
             console.log("response: ",response);

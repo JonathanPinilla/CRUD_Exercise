@@ -148,3 +148,33 @@ input:active{
 ::-webkit-calendar-picker-indicator {
     filter: invert(1);
 }
+
+table{
+    font-size: 14px;
+    background-color: #3C3C46;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 4pt;
+}
+
+th{
+    color:rgba(255, 255, 255, 0.60);
+    font-weight: normal;
+    padding: 16pt;
+    border: 1px solid rgba(255, 255, 255, 0.12);;
+    border-radius: 4pt;
+}
+
+tr{
+    min-height: 56pt;
+}
+
+td{
+    padding: 16pt;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 4pt;
+}
+
+.flexCont{
+    display: flex;
+    justify-content: center;
+}

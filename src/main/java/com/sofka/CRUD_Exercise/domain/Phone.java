@@ -1,5 +1,6 @@
 package com.sofka.CRUD_Exercise.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -40,8 +41,9 @@ public class Phone implements Serializable {
     /**
      * Link point to contact (a contact can have many phones)
      */
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = Contact.class, optional = false)
     @JoinColumn(name = "phone_contact_id", nullable = false)
+    @JsonBackReference
     private Contact phoneContact;
 
     /**

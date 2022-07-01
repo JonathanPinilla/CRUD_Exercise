@@ -14,8 +14,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.sql.Date;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Entity for contact
@@ -73,6 +73,6 @@ public class Contact implements Serializable {
             mappedBy = "phoneContact"
     )
     @JsonManagedReference
-    private Set<Phone> phones = new LinkedHashSet<>();
+    private List<Phone> phones = new ArrayList<>();
 
 }

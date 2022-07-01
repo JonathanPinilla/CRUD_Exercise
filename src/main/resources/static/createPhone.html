@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create Contact</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/createPhone.js"></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <div>
+        <h6>Create a new contact</h6>
+        <body1>Yo have to fill the next form and then click the submit button to create a new phone</body1>
+        <br><br>
+        <form id="formToCreate">
+            <body1>To see the id of the current contacts on the system, press the button go back and then show contacts</body1>
+            <label for="phoneContact">Contact id</label>
+            <input name="phoneContact" type="text" required>
+            <label for="phoneNumber">Phone number</label>
+            <input name="phoneNumber" type="text" required>
+            <button id="createPhone" type="submit">Submit</button>
+        </form>
+        <br>
+        <button onclick="history.back()">Go back</button>
+    </div>
+</body>
+
+</html>

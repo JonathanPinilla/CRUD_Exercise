@@ -7,6 +7,7 @@ import com.sofka.CRUD_Exercise.repository.PhoneRepository;
 import com.sofka.CRUD_Exercise.service.interfaces.ILibrary;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -38,6 +39,7 @@ public class ContactLibraryService implements ILibrary {
      * @return list with all the contacts on the system
      */
     @Override
+    @Transactional
     public List<Contact> getList() {
         return contactRepository.findAll();
     }
@@ -49,6 +51,7 @@ public class ContactLibraryService implements ILibrary {
      * @return the contact created
      */
     @Override
+    @Transactional
     public Contact createContact(Contact contact) {
         return contactRepository.save(contact);
     }
@@ -60,6 +63,7 @@ public class ContactLibraryService implements ILibrary {
      * @return the phone created
      */
     @Override
+    @Transactional
     public Phone createPhone(Phone phone) {
         return phoneRepository.save(phone);
     }
@@ -72,6 +76,7 @@ public class ContactLibraryService implements ILibrary {
      * @return the contact updated
      */
     @Override
+    @Transactional
     public Contact updateContact(Integer id, Contact contact) {
         contact.setId(id);
         return contactRepository.save(contact);
@@ -85,8 +90,8 @@ public class ContactLibraryService implements ILibrary {
      * @return the contact updated
      */
     @Override
+    @Transactional
     public Contact updateName(Integer id, Contact contact) {
-        contact.setId(id);
         contactRepository.updateName(id, contact.getContactName());
         return contact;
     }
